@@ -9,11 +9,11 @@ import random
 
 
 def get_numbers_ticket(min, max, quantity):
-    from random import randint
+    from random import sample
    
     numbers = set()
     for i in range(quantity):
-        numbers.add(randint(min, max))
+        numbers.add(sample(min, max))
         if max >= 1000:
                 print("Please enter a number less than 1000")
         elif min > max:
@@ -25,5 +25,5 @@ def get_numbers_ticket(min, max, quantity):
         
     return numbers
 
-lottery_numbers = get_numbers_ticket(1, 1002, 8)
+lottery_numbers = get_numbers_ticket(15, 17, 8)
 print("Ваші лотерейні числа:", lottery_numbers)
